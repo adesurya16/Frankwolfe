@@ -57,7 +57,7 @@ function [nilai_akhir, tabel_arus, tabel_cost] = frankwolfe(status_pel, tarif, k
     end
 
     for i=1:link_count
-        tabel_t(1,i) = link(i,6)+tabel_X(1,i)*link(i,7);
+        tabel_t(1,i) = link(i,6)+tabel_X(1,i)*link(i,7); % hitung_cost
     end
 
     % print tabel_X dan tabel_t

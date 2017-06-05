@@ -40,3 +40,8 @@ Pelabuhan : 3
 7
 8
 9
+
+Tarif Truk : 60
+Tarif Kereta : 50
+Kapasitas Truk : 20
+Kapasitas Kereta : 40

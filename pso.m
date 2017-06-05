@@ -7,6 +7,7 @@ filename = 'skenario.txt';
 number_particle = 4;
 inertia_weight = 1;
 matrix_eksisting = zeros(1,jumlah_pel);
+% disp(matrix_eksisting);
 [nilai_eksisting, ~, ~] = inc_load(matrix_eksisting, 0, 0, filename);
 batas_loop = 10;
 

@@ -1,17 +1,11 @@
-function [tabel_cost] = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran)
+function [tabel_cost] = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran, tarif_truk, tarif_kereta, K_truk, K_kereta)
     
     % Inisialisasi variabel
     link = size(fungsi_biaya,1);
     tabel_cost = zeros(1,link);
     
-    tarif_truk = 60;
-    tarif_kereta = 50;
-    K_truk = 20;
-    K_kereta = 40;
-    
     nilai_waktu = 8;
     n = 4;
-    
 	% Tarif SSS
     if (tar == 0)
         tarif_sss = 40;

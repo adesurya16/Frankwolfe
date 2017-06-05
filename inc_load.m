@@ -17,9 +17,18 @@ function [nilai_akhir, tabel_arus, tabel_cost] = inc_load(status_pel, tar, ukura
 
     jumlah_pelabuhan = fscanf(fid, '\nPelabuhan : %d\n');
     pelabuhan = fscanf(fid, '%d\n', [1 jumlah_pelabuhan]);
-
+    
+    tarif_truk = fscanf(fid, '\nTarif Truk : %d',1);
+    disp(tarif_truk);
+    tarif_kereta = fscanf(fid, '\nTarif Kereta : %d',1);
+    disp(tarif_kereta);
+    K_truk = fscanf(fid, '\nKapasitas Truk : %d',1);
+    disp(K_truk);
+    K_kereta = fscanf(fid, '\nKapasitas Kereta : %d',1);
+    disp(K_kereta);
     tabel_arus = zeros(1,link);
-    tabel_cost = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran);
+    
+    tabel_cost = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran, tarif_truk, tarif_kereta, K_truk, K_kereta);
 
     % Mulai pembebanan
     for h=1:jumlah_pembebanan
@@ -36,7 +45,7 @@ function [nilai_akhir, tabel_arus, tabel_cost] = inc_load(status_pel, tar, ukura
         end
         
         % Update Tabel Cost
-        tabel_cost = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran);
+        tabel_cost = hitung_cost(tabel_arus, fungsi_biaya, tar, ukuran, tarif_truk, tarif_kereta, K_truk, K_kereta);
         
     end
 
