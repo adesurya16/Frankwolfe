@@ -5,7 +5,7 @@ clear all;
 filename = 'skenario_FW_2.txt'; %file yang diinput format ikutin dari gw
 jumlah_iterasi = 5; %tidak dipakai karena menurut AEC
 iterasi_bisection = 5; %default 5 didapat dari file
-batas_AEC = 0.01;
+batas_AEC = 0.05;
 
 % Mulai Baca File %
 fid = fopen(filename, 'r');
